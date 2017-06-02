@@ -17,12 +17,13 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import welcome
+#from .views import welcome
+import views
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', welcome),
+    url(r'^$', views.welcome),
     url(r'^jobs/', include('posts.urls', namespace = 'posts')),
 ]
 
